@@ -1,0 +1,1179 @@
+:root {
+    --intense: #ff7e88;
+    --basic: #a8e9d0;
+    --bright: #ffffa0;
+}
+
+@font-face {
+    src: url('../assets/fonts/Roboto-Regular.ttf');
+    font-family: 'Regular';
+}
+
+@font-face {
+    src: url('../assets/fonts/Ewert-Regular.ttf');
+    font-family: 'special';
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    margin: 0px;
+    font-family: 'Regular';
+}
+
+.wrapper {
+    padding: 0 15%;
+}
+
+@media only screen and (max-width: 1700px){
+    .wrapper {
+        padding: 0 10%;
+    }
+}
+
+.webkit {
+    box-shadow: 0 0 16px #666666;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+/*---------------------------------------------------------------------------------------------------
+
+                                            INDEX.PHP
+
+---------------------------------------------------------------------------------------------------*/
+
+
+/*------------------------------------
+            Desktop menu
+------------------------------------*/
+
+.mobile-menu {
+    display: none;
+}
+
+.desktop-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #ffffff;
+    align-items: center;
+    padding: .5rem 2rem;
+    font-family: 'Regular';
+    font-size: 20px;
+    position: fixed;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 0 16px #888888;
+    z-index: 100;
+}
+
+.desktop-menu ul {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+.desktop-menu-left {
+    width: auto;
+    color: var(--intense);
+    width: 25%;
+}
+
+.desktop-menu-left ul{
+    width: auto;
+    color: var(--intense);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.desktop-menu-left img {
+    width: 120px;
+    margin-top: 2px;
+}
+
+.desktop-menu-right {
+    width: 50%;
+}
+
+.desktop-menu-right ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.desktop-menu-right li:hover {
+    cursor: pointer;
+    color: var(--intense);
+}
+
+/*------------------------------------
+            Desktop header
+------------------------------------*/
+
+.mobile-section-header {
+    display: none;
+}
+
+.desktop-section-header {
+    background-image: url('../assets/images/desarrollo web patron.png');
+    background-size: contain;
+    background-repeat: repeat;
+    padding-top: 5rem;
+    height: 40vh;
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+@keyframes headerSlide {
+    0%, 50% {
+        transform: translatex(0);
+    }
+    75%, 100% {
+        transform: translateX(-190%);
+    }
+}
+
+
+
+@keyframes headerSlideIn {
+    0% {
+        transform: translateX(190%);
+    }
+    25%, 75% {
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-190%);
+    }
+}
+
+.container-section-header {
+    transform: translateZ(0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 4rem;
+    justify-content: center;
+    /* animation: headerSlide 4s ease-in-out forwards; */
+    
+}
+
+.container-section-header h1{
+    font-size: 4rem;
+    margin-bottom: .5rem;
+    font-family: 'regular';
+    animation: headerSlide 4s 1;
+    
+
+}
+
+.container-section-header h2 {
+    text-shadow: 0 0 14px #ffffff;
+}
+
+/*------------------------------------
+            Desktop CRM
+------------------------------------*/
+
+.mobile-section-crm {
+    display: none;
+}
+
+.desktop-section-crm {
+    padding: 2rem;
+    background-image: url('../assets/images/background-funnels.png');
+    background-size: contain;
+    background-position: right 2rem;
+    background-repeat: no-repeat;
+}
+
+.desktop-section-crm .header {
+    font-size: 12px;
+    margin-bottom: 1rem;
+    padding-bottom: .5rem;
+    border-bottom: 1px solid gray;
+}
+
+.desktop-section-crm .header h1{
+    margin: 0px;
+}
+
+.desktop-section-crm .body {
+    display: flex;
+}
+
+.desktop-section-crm .body .left-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 5rem;
+}
+
+.desktop-section-crm .body .left-container img {
+    width: 200px;
+    margin-bottom: 2rem;
+}
+
+.desktop-section-crm .body .left-container h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.desktop-section-crm .body .left-container p {
+    line-height: 1.5;
+}
+
+.desktop-section-crm .body .right-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 5rem;
+}
+
+.desktop-section-crm .body .right-container h3 {
+    color: var(--intense);
+    margin-top: .5rem;
+}
+
+/*------------------------------------
+        Desktop develpment
+------------------------------------*/
+
+.mobile-section-development {
+    display: none;
+}
+
+.desktop-section-development {
+    padding: 2rem;
+}
+
+.container-section-development .header {
+    font-size: 12px;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid gray;
+}
+
+/*@media only screen and (max-width: 1700px){*/
+/*    .container-section-development .header {*/
+/*        font-size: 12px;*/
+/*        margin-bottom: 2rem;*/
+/*        padding-bottom: 0.5rem;*/
+/*        border-bottom: 1px solid gray;*/
+/*    }    */
+/*}*/
+
+.container-section-development .body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5rem;
+}
+
+@media only screen and (max-width: 1700px) {
+   .container-section-development .body {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+        padding-top: 2.5rem;
+    }
+}
+
+.card-development-prices {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    border-radius: 6px;
+    box-shadow: 0 0 12px #aaaaaa;
+    transition: all 300ms;
+}
+
+@media only screen and (max-width: 1700px){
+    .card-development-prices {
+        padding: 1rem;
+    } 
+}
+
+.card-development-prices:hover{
+    transform: translateY(-2rem);
+    transition: all 300ms;
+    cursor: pointer;
+}
+
+
+.card-development-prices-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 2rem;
+}
+
+
+.card-development-prices-body {
+    padding: 12px 0;
+    padding-top: 24px;
+}
+
+
+.card-development-prices-body ul {
+    line-height: 1.5;
+}
+
+@media only screen and (max-width: 1700px){
+  .card-development-prices-body {
+        font-size: 14px;
+    }  
+}
+
+.card-development-prices-footer {
+    padding: 1.5rem 0;
+    padding-bottom: 0;
+    margin: 0 auto;
+}
+
+.card-development-prices-footer button{
+    background-color: var(--intense);
+    border: none;
+    padding: 8px 24px;
+    border-radius: 4px;
+    box-shadow: 0 0 12px #888888;
+    color: #ffffff;
+}
+
+/*------------------------------------
+        Desktop technologies
+------------------------------------*/
+
+.mobile-section-technologies {
+    display: none;
+}
+
+.desktop-section-technologies {
+    background-color: var(--bright);
+    height: 40vh;
+    padding: 2rem;
+}
+
+.container-section-technologies {
+    color: var(--intense);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-section-technologies .header {
+    font-size: 12px;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--intense);
+}
+
+.container-section-technologies .body {
+    text-align: center;
+}
+
+.container-section-technologies .body h1 {
+    margin-bottom: .5rem;
+    font-size: 2rem;
+}
+
+.container-section-technologies .body p {
+    font-size: 20px;
+}
+
+/*------------------------------------
+        Desktop contact
+------------------------------------*/
+
+.mobile-section-contact {
+    display: none;
+}
+
+.desktop-section-contact {
+    padding: 2rem;
+}
+
+.container-section-contact .header {
+    font-size: 12px;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #666666;
+}
+
+.container-section-contact .body {
+    display: flex;
+    align-items: row;
+    justify-content: space-between;
+}
+
+.container-section-contact .left-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 5rem;
+}
+
+.container-section-contact .left-container img {
+    margin-top: .5rem;
+    width: 180px;
+}
+
+.container-section-contact .left-container p {
+    line-height: 1.5;
+    margin-top: 4rem;
+    font-size: 20px;
+}
+
+.container-section-contact .right-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 5rem;
+}
+
+.container-section-contact .right-container form {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 12px #aaaaaa;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.container-section-contact .right-container form label {
+    color: var(--exiting);
+}
+
+.container-section-contact .right-container label:not(:first-child) {
+    margin-top: .5rem;
+}
+
+.container-section-contact .right-container form input[type="text"], input[type="number"], input[type="email"], textarea{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 6px;
+    margin-top: .5rem;
+    font-size: 1rem;
+    color: var(--elegance);
+    margin-bottom: .5rem;
+}
+
+.container-section-contact .right-container button {
+    width: 200px;
+    margin: 0 auto;
+    background-color: var(--basic);
+    padding: .5rem 2rem;
+    border-radius: .5rem;
+    border: none;
+    box-shadow: 0 0 12px #aaaaaa;
+}
+
+/*------------------------------------
+            Desktop footer
+------------------------------------*/
+
+footer {
+    background-color: var(--intense);
+    padding: 3rem;
+}
+
+.container-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container-footer img{
+    width: 200px;
+    margin-top: 1rem;
+}
+
+.container-footer h4 {
+    color: var(--bright);
+    letter-spacing: 1em;
+    margin-top: 1rem;
+}
+
+/*------------------------------------
+            Desktop whatsapp
+------------------------------------*/
+
+.mobile-whatsapp {
+    display: none;
+}
+
+.whatsapp {
+    background-color: var(--intense);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 120;
+    transform: translate(92vw, 85vh);
+    box-shadow: 0 0 16px #888888;
+}
+
+.whatsapp:hover{
+    cursor: pointer;
+    transform: translate(92vw, 84vh);
+}
+
+.whatsapp img {
+    width: 70%;
+}
+
+@media only screen and (max-width: 1700px){
+   .mobile-whatsapp {
+        display: none;
+    }
+
+    .whatsapp {
+        background-color: var(--intense);
+        width: 75px;
+        height: 75px;
+    }
+
+    .whatsapp:hover{
+        cursor: pointer;
+        transform: translate(92vw, 84vh);
+    }
+
+    .whatsapp img {
+        width: 70%;
+    } 
+}
+
+/*------------------------------------
+            MOBILE VERSION
+------------------------------------*/
+
+@media only screen and (max-width: 500px){
+
+    body {
+        margin: 0px;
+        font-family: 'Regular';
+    }
+
+    body::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .wrapper {
+        padding: 0 6px;
+    }
+    
+    .webkit {
+        box-shadow: 0 0 16px #666666;
+    }
+
+    /*------------------------------------
+            Mobile menu
+    ------------------------------------*/
+
+    .desktop-menu {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: flex;
+        flex-direction: column;
+        z-index: 100;
+        box-shadow: 0 0 16px #888888;
+        min-width: 100%;
+        max-width: 100%;
+        position: fixed;
+        background-color: #ffffff;
+        padding: 12px 12px;
+        box-sizing: border-box;
+    }
+
+    .mobile-menu .mobile-menu-left {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+       
+    }
+
+    .mobile-menu .mobile-menu-left img {
+        width: 100px;
+    }
+
+    .mobile-menu .mobile-menu-left ul {
+        margin: 0;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 12px;
+        color: var(--intense);
+    }
+
+    .mobile-menu .mobile-menu-right {
+        padding: 0;
+        margin: 0;
+        margin-top: 6px; 
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        font-size: 14px;
+        overflow: unset;
+    }
+
+    .mobile-menu .mobile-menu-right ul {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        
+    }
+
+
+    /*------------------------------------
+            Mobile header
+    ------------------------------------*/
+
+    .desktop-section-header {
+        display: none;
+    }
+
+    .mobile-section-header {
+        display: block;
+    }
+
+    .mobile-section-header {
+        padding-top: 4rem;
+        background-image: url('../assets/images/desarrollo web patron.png');
+        background-size: contain;
+    }
+
+    .mobile-container-section-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 6rem 1rem;
+        justify-content: center;
+        animation: headerSlide 1s ease-in-out forwards;
+    }
+    
+    .mobile-container-section-header h1 {
+        font-size: 3.5rem;
+        margin-bottom: .5rem;
+        font-family: 'special';
+        color: var(--bright);
+        text-shadow: 2px 2px 3px #ff7e88;
+    }
+
+    .mobile-container-section-header h2 {
+        font-size: 1rem;
+        margin-bottom: .5rem;
+        text-shadow: 0 0 14px #ffffff;
+    }
+
+
+    /*------------------------------------
+            Mobile CRM
+    ------------------------------------*/
+
+    .desktop-section-crm {
+        display: none;
+    }
+
+    .mobile-section-crm {
+        display: block;
+    }
+
+    .mobile-section-crm {
+        padding: 12px;
+    }
+
+    .mobile-container-section-crm .header {
+        font-size: 9px;
+        border-bottom: 1px solid #888888;
+        padding-bottom: 6px;
+    }
+
+    .mobile-container-section-crm .body .left-container img {
+        width: 140px;
+        margin-top: 3.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .mobile-container-section-crm .body .left-container h1 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .mobile-container-section-crm .body .left-container p {
+        line-height: 1.5;
+    }
+
+    .mobile-container-section-crm .body .right-container{
+        padding: 2rem 0;
+    }
+
+    .mobile-container-section-crm .body .right-container h1 {
+        font-size: 18px;
+        margin-bottom: 1rem;
+        text-align: center;
+        font-style: italic;
+    }
+
+    .mobile-container-section-crm .body .right-container h3 {
+        font-size: 18px;
+        margin-bottom: 1rem;
+        text-align: center;
+        font-style: 'regular';
+        color: var(--intense);
+    }
+
+    /*------------------------------------
+            Mobile development
+    ------------------------------------*/
+
+    .desktop-section-development {
+        display: none;
+    }
+
+    .mobile-section-development {
+        display: block;
+    }
+
+    .mobile-section-development {
+        padding: 12px;
+    }
+
+    .mobile-container-section-development .header {
+        font-size: 9px;
+        border-bottom: 1px solid #888888;
+        padding-bottom: 6px;
+    }
+
+    .mobile-container-section-development .body {
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+    }
+
+    .mobile-container-section-development .body .card-development-prices {
+        margin-bottom: 1.5rem;
+    }
+    
+    /*------------------------------------
+            Mobile technologies
+    ------------------------------------*/
+
+    .desktop-section-technologies {
+        display: none;
+    }
+
+    .mobile-section-technologies {
+        display: block;
+    }
+
+    .mobile-section-technologies {
+        padding: 12px;
+        background-color: var(--bright);
+        height: 40vh;
+    }
+
+    .mobile-container-section-technologies {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 100%;
+        color: var(--intense);
+    }
+
+    .mobile-container-section-technologies .header {
+        border-bottom: 1px solid var(--intense);
+        margin-bottom: 1rem;
+    }
+
+    .mobile-container-section-technologies .header h1 {
+        font-size: 16px;
+    }
+
+    .mobile-container-section-technologies .body h1 {
+        font-size: 18px;
+        margin-bottom: .5rem;
+    }
+
+    .mobile-container-section-technologies .body p {
+        font-size: 12px;
+    }
+
+
+    /*------------------------------------
+            Mobile contact
+    ------------------------------------*/
+
+    .desktop-section-contact {
+        display: none;
+    }
+
+    .mobile-section-contact {
+        display: block;
+    }
+
+    .mobile-section-contact {
+        padding: 12px;
+    }
+
+    .mobile-container-section-contact .header {
+        font-size: 9px;
+        border-bottom: 1px solid #888888;
+        padding-bottom: 6px;
+        margin-top: 2rem;
+    }
+    
+    .mobile-container-section-contact .body {
+        display: flex;
+        flex-direction: column;
+        align-items: row;
+        justify-content: space-between;
+    }
+    
+    .mobile-container-section-contact .left-container {
+        display: flex;
+        flex-direction: column;
+        /* padding: 0 1rem; */
+    }
+    
+    .mobile-container-section-contact .left-container img {
+        margin-top: 3rem;
+        width: 140px;
+    }
+    
+    .mobile-container-section-contact .left-container p {
+        line-height: 1.5;
+        margin-top: 2rem;
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+    
+    .mobile-container-section-contact .right-container {
+        display: flex;
+        flex-direction: column;
+        /* padding: 0 1rem; */
+    }
+    
+    .mobile-container-section-contact .right-container form {
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 0 12px #aaaaaa;
+        padding: 1rem;
+        border-radius: 8px;
+        margin-bottom: 4rem;
+    }
+    
+    .mobile-container-section-contact .right-container form label {
+        color: var(--exiting);
+    }
+    
+    .mobile-container-section-contact .right-container label:not(:first-child) {
+        margin-top: .5rem;
+    }
+    
+    .mobile-container-section-contact .right-container form input[type="text"], input[type="number"], input[type="email"], textarea{
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 6px;
+        margin-top: .5rem;
+        font-size: 1rem;
+        color: var(--elegance);
+        margin-bottom: .5rem;
+    }
+    
+    .mobile-container-section-contact .right-container button {
+        width: 200px;
+        margin: 0 auto;
+        background-color: var(--basic);
+        padding: .5rem 2rem;
+        border-radius: .5rem;
+        border: none;
+        box-shadow: 0 0 12px #aaaaaa;
+    }
+
+    /*------------------------------------
+            Mobile whatsapp
+    ------------------------------------*/
+
+    .whatsapp {
+        display: none;
+    }
+
+    .mobile-whatsapp {
+        background-color: var(--basic);
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        z-index: 120;
+        transform: translate(45vw, 90vh);
+        box-shadow: 0 0 16px #222222;
+    }
+    
+    .mobile-whatsapp img {
+        width: 70%;
+    }
+
+}
+
+/*---------------------------------------------------------------------------------------------------
+
+                                            CRM.PHP
+
+---------------------------------------------------------------------------------------------------*/
+
+/*------------------------------------
+            Desktop explanation
+------------------------------------*/
+
+.mobile-section-explanation {
+    display: none;
+}
+
+.desktop-section-explanation {
+
+    padding-top: 10rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-bottom: 5rem;
+
+    background-image: url('../assets/images/background-funnels.png');
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+.desktop-container-section-explanation {
+    line-height: 1.5;
+    padding: 0 6rem;
+}
+
+.desktop-container-section-explanation img {
+    width: 320px;
+    margin-bottom: 1.5rem;
+}
+
+.desktop-container-section-explanation h1 {
+    margin-bottom: 18px;
+    border-bottom: 1px solid rgba(200, 200, 200, .4);
+    font-size: 24px;
+}
+
+.desktop-container-section-explanation p {
+    line-height: 1.5;
+    margin-bottom: 4rem;
+    font-size: 19px;
+}
+
+/*------------------------------------
+            MOBILE VERSION
+------------------------------------*/
+
+@media only screen and (max-width: 500px){
+
+
+    /*------------------------------------
+            Mobile CRM explanation
+    ------------------------------------*/
+
+    .desktop-section-explanation {
+        display: none;
+    }
+
+    .mobile-section-explanation {
+        display: block;
+        padding-top: 10rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-bottom: 5rem;
+    
+        background-image: url('../assets/images/background-funnels.png');
+        background-position: right;
+        background-repeat: no-repeat;
+    }
+    
+    .mobile-container-section-explanation {
+        line-height: 1.5;
+        padding: 0 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .mobile-container-section-explanation img {
+        width: 160px;
+        margin-bottom: 1.5rem;
+    }
+    
+    .mobile-container-section-explanation h1 {
+        margin-bottom: 18px;
+        border-bottom: 1px solid rgba(200, 200, 200, .4);
+        font-size: 20px;
+        width: 100%;
+    }
+
+    .mobile-container-section-explanation p {
+        line-height: 1.5;
+        margin-bottom: 4rem;
+        font-size: 16px;
+    }
+
+}
+
+/*---------------------------------------------------------------------------------------------------
+
+                                        DEVELOPMENT.PHP
+
+---------------------------------------------------------------------------------------------------*/
+/*------------------------------------
+            Desktop explanation
+------------------------------------*/
+
+.mobile-development-section-explanation {
+    display: none;
+}
+
+.desktop-development-section-explanation {
+
+    padding-top: 10rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-bottom: 5rem;
+
+    background-image: url('../assets/images/background-funnels.png');
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+.desktop-development-section-explanation-container {
+    line-height: 1.5;
+    padding: 0 6rem;
+}
+
+.desktop-development-section-explanation-container img {
+    width: 320px;
+    margin-bottom: 1.5rem;
+}
+
+.desktop-development-section-explanation-container h1 {
+    margin-bottom: 18px;
+    border-bottom: 1px solid rgba(200, 200, 200, .4);
+    font-size: 24px;
+}
+
+.desktop-development-section-explanation-container .main-header {
+    margin-bottom: 18px;
+    border: none;
+    font-size: 48px;
+    color: var(--intense);
+}
+
+.desktop-development-section-explanation-container p {
+    line-height: 1.5;
+    margin-bottom: 4rem;
+    font-size: 19px;
+}
+
+.desktop-development-section-explanation-container span {
+    color: var(--intense);
+    font-size: 19px;
+}
+
+/*------------------------------------
+            MOBILE VERSION
+------------------------------------*/
+
+@media only screen and (max-width: 500px){
+
+    /*------------------------------------
+        Mobile development explanation
+    ------------------------------------*/
+
+    .desktop-development-section-explanation {
+        display: none;
+    }
+
+    .mobile-development-section-explanation {
+        display: block;
+        padding-top: 10rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-bottom: 5rem;
+    
+        background-image: url('../assets/images/background-funnels.png');
+        background-position: right;
+        background-repeat: no-repeat;
+    }
+    
+    .mobile-development-section-explanation-container {
+        line-height: 1.5;
+        padding: 0 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .mobile-development-section-explanation-container .main-header {
+        margin-bottom: 18px;
+        border: none;
+        font-size: 34px;
+        color: var(--intense);
+        text-align: center;
+    }
+    
+    .mobile-development-section-explanation-container h1 {
+        margin-bottom: 18px;
+        border-bottom: 1px solid rgba(200, 200, 200, .4);
+        font-size: 20px;
+        width: 100%;
+    }
+
+    .mobile-development-section-explanation-container p {
+        line-height: 1.5;
+        margin-bottom: 4rem;
+        font-size: 16px;
+    }
+
+    .mobile-development-section-explanation-container span {
+        color: var(--intense);
+    }
+
+}
