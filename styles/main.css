@@ -168,7 +168,7 @@ a {
     align-items: center;
     padding: 1rem 4rem;
     justify-content: center;
-    /* animation: headerSlide 4s ease-in-out forwards; */
+    
     
 }
 
@@ -176,8 +176,8 @@ a {
     font-size: 4rem;
     margin-bottom: .5rem;
     font-family: 'regular';
-    animation: headerSlide 4s 1;
-    
+    animation: headerSlide 4s 1 ease-in-out forwards;
+    transform: translateZ(0);
 
 }
 
@@ -669,6 +669,7 @@ footer {
 
     .mobile-section-header {
         display: block;
+        overflow: hidden;
     }
 
     .mobile-section-header {
@@ -683,15 +684,14 @@ footer {
         align-items: center;
         padding: 6rem 1rem;
         justify-content: center;
-        animation: headerSlide 1s ease-in-out forwards;
     }
     
     .mobile-container-section-header h1 {
-        font-size: 3.5rem;
-        margin-bottom: .5rem;
-        font-family: 'special';
-        color: var(--bright);
-        text-shadow: 2px 2px 3px #ff7e88;
+        font-size: 36px;
+        margin-bottom: 1rem;
+        font-family: 'regular';
+        animation: headerSlide 4s 1 ease-in-out forwards;
+        transform: translateZ(0);
     }
 
     .mobile-container-section-header h2 {
@@ -699,7 +699,6 @@ footer {
         margin-bottom: .5rem;
         text-shadow: 0 0 14px #ffffff;
     }
-
 
     /*------------------------------------
             Mobile CRM
